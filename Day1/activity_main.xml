@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 创建最外层容器，采用线性布局，有两个子节点：RelativeLayout和LinearLayout-->
+<!-- orientation属性设置线性布局为垂直分布-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,6 +8,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.eason.myapplication.MainActivity">
+<!-- layout_weight设置该节点权重值，用于按比例占据父容器的空间-->
+<!-- paddingXXX用于设置内边距-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -14,7 +18,8 @@
         android:paddingRight="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
-
+<!-- id属性用来标识该节点，语法是@+id/[id内容]-->
+<!-- layout_centerXXX用于设置节点在父容器中的居中方式-->
         <Button
             android:text="center button"
             android:layout_width="wrap_content"
@@ -22,7 +27,7 @@
             android:id="@+id/button"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
-
+<!-- 以下4个TextView通过控制与button节点的相对位置，占据了父容器的4个角-->
         <TextView
             android:text="left&top"
             android:layout_width="wrap_content"
@@ -30,8 +35,7 @@
             android:layout_above="@+id/button"
             android:layout_toStartOf="@+id/button"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="32dp"
-            android:id="@+id/textView" />
+            android:layout_marginBottom="32dp" />
 
         <TextView
             android:text="right&top"
@@ -40,8 +44,7 @@
             android:layout_above="@+id/button"
             android:layout_toEndOf="@+id/button"
             android:layout_marginStart="20dp"
-            android:layout_marginBottom="32dp"
-            android:id="@+id/textView2" />
+            android:layout_marginBottom="32dp" />
 
         <TextView
             android:text="left&bottom"
@@ -61,14 +64,17 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="32dp" />
     </RelativeLayout>
+<!-- layout_weight设置该节点权重值，用于按比例占据父容器的空间，注意layout_height的值与同级节点的该属性值相同-->
+<!-- gravity用于设置子节点的分布方式为垂直居中-->
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_weight="1"
         android:gravity="center_vertical"
         android:orientation="horizontal">
+
+<!-- 以下创建了4个宽度不同的子节点-->
+<!-- 注意虽然weight属性相同，但是比例并不1:1:1:1-->
 
         <CheckBox
             android:text="CheckBox"
