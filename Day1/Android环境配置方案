@@ -1,0 +1,37 @@
+Android开发环境清单，下面的地址都是不需要翻墙的：
+1.JDK(Java环境):http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-windows-x64.exe
+2.Android studio(Android开发用的IDE):http://www.android-studio.org/ 
+3.Gradle(Android项目构建工具):https://pan.baidu.com/s/1pLEkm4F#list/path=%2F
+
+说明：Android是谷歌旗下的产品，而由于某些奇妙的原因，我们访问不了google，事实上是非常影响Android开发者获得开发套件及学习资料的，本教程提供的方案虽然无需翻墙，但是还是强烈建议大家还是开始学会科学上网的方式，以避免因为gfw的原因导致的更多麻烦。
+
+一.java环境的配置
+
+java是Android开发使用最多的编程语言，也是Android内核的运行环境，入门Android或者精通Android，都不可避免的要从Java入手。
+
+windows下安装Java：
+1.首先下载JDK并安装（http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-windows-x64.exe）
+2.配置JDK环境变量
+
+--------------------------------------
+计算机→属性→高级→环境变量→（系统变量）新建→
+变量名：'JAVA_HOME'，变量值：'C:\Program Files\Java\jdk1.8.0_31'
+新建→变量名：'CLASSPATH'，变量值：'.;%JAVA_HOME%\lib\tools.jar;'
+选择 PATH，在最后添加';%JAVA_HOME%\bin'
+--------------------------------------
+
+ps.配置的时候注意比对jdk的安装路径，要安照自己的安装路径来，上面写的路径不一定完全对。配置完成后，在命令行输入命令java和javac，都有反馈信息说明配置成功。
+
+二.Android studio的安装
+
+Android studio是目前最好的Android开发的IDE，安装也非常简便，他会自动为你安装好Android需要的sdk、虚拟机等环境或软件。但是由于gfw的原因，可能在更新的时候出现连接超时等现象，此时通过以下安装方式解决问题。
+
+1.下载安装Android studio自带sdk的版本（http://www.android-studio.org/）
+2.下载Gradle
+3.Android Studio安装完成后，第一次启动AS前，为了避免重新下载新版本的SDK，需要做如下操作：
+AS启动前，打开安装目录，请先将bin目录的idea.properties文件中增加一行：disable.android.first.run=true就行了，避免第一次打开AS时自动重新下载SDK。
+4.启动Android Studio，在启动界面右下角选择Configure > Project Defaults > Project Structure。
+在弹出的对话框中设置之前下好的Android SDK和Gradle。
+5.新建项目即可开始使用Android Studio
+
+综上所述，翻个墙就没这些事了。完。
