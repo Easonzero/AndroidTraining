@@ -14,7 +14,7 @@
 
 - Activity([demo](./app/MainActivity.java))
 
-1. ![生命周期](http://hi.csdn.net/attachment/201109/1/0_1314838777He6C.gif)
+1. ![生命周期](./lifecycle.png)
 - 启动Activity：系统会先调用onCreate方法，然后调用onStart方法，最后调用onResume，Activity进入运行状态。
 - 当前Activity被其他Activity覆盖其上或被锁屏：系统会调用onPause方法，暂停当前Activity的执行。
 - 当前Activity由被覆盖状态回到前台或解锁屏：系统会调用onResume方法，再次进入运行状态。
