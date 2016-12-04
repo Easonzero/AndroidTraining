@@ -8,3 +8,5 @@ A training by alibaba club for those who long to learning about Android
 - *Day2* 主题和风格的编写、java初识、Activity
 
 - *Day3* java面向对象、intent
+
+- *Day3* android数据存储
