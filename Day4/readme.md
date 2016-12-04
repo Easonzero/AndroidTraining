@@ -13,10 +13,12 @@
 
 在`AndroidManifest.xml`文件中添加如下权限
 
+```xml
 <!-- 在SDCard中创建与删除文件权限 -->
 <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
 <!-- 往SDCard写入数据权限 -->
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+```
 
 ## 文件存储
 
