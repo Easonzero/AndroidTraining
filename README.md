@@ -9,4 +9,4 @@ A training by alibaba club for those who long to learning about Android
 
 - *Day3* java面向对象、intent
 
-- *Day3* android数据存储
+- *Day4* android数据存储
