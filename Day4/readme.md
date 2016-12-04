@@ -26,7 +26,7 @@ java语言提供了对文件进行操作的类，比如File、FileOutputStream�
 
 1.`File`类是对文件的封装类，创建实例的方式是
 ```java
-File file = new File('文件路径');
+File file = new File("文件路径");
 ```
 File类提供了文件的创建、删除、重命名等针对文件的操作。
 
@@ -66,7 +66,7 @@ preference保存的数据格式是(key，value)的形式，即key是索引，val
 1.preference读取数据：
 
 ```java
-SharedPreferences sp = getSharedPreferences('name', MODE_WORLD_READABLE);  
+SharedPreferences sp = getSharedPreferences("name", MODE_WORLD_READABLE);  
 //从SharedPreferences获得内容  
 String content = sp.getString("key", "默认值");  
 ```
@@ -83,7 +83,7 @@ preference的操作模式有三种：
 2.preference写入数据：
 
 ```java
-SharedPreferences.Editor editor = getSharedPreferences('name', MODE_WORLD_WRITEABLE).edit();  
+SharedPreferences.Editor editor = getSharedPreferences("name", MODE_WORLD_WRITEABLE).edit();  
 //将数据添加到editor  
 editor.putString("key", myEditText.getText().toString());  
 //提交editor内容到preference  
