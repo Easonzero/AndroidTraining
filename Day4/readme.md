@@ -22,19 +22,19 @@
 
 java语言提供了对文件进行操作的类，比如File、FileOutputStream、FileInputStream等等。
 
-1. `File`类是对文件的封装类，创建实例的方式是
+1.`File`类是对文件的封装类，创建实例的方式是
 ```java
 File file = new File('文件路径');
 ```
 File类提供了文件的创建、删除、重命名等针对文件的操作。
 
-2. `FileOutputStream`及`FileInputStream`是文件内容的操作类，可以将文件内容读入内存中或者将在文件中写入任意内容。创建实例的方式是
+2.`FileOutputStream`及`FileInputStream`是文件内容的操作类，可以将文件内容读入内存中或者将在文件中写入任意内容。创建实例的方式是
 ```java
 FileInputStream fis = new FileInputStream(file);
 ```
 二者使用之后都需要通过`close`方法关闭流，避免内存泄露。
 
-3. 文件写入的api是通过`FileOutputStream`类的`write`方法写入的，参数是字节数组，字节数组可以直接通过字符串的`getBytes`方法获得
+3.文件写入的api是通过`FileOutputStream`类的`write`方法写入的，参数是字节数组，字节数组可以直接通过字符串的`getBytes`方法获得
 
 文件读取的方法如下：
 ```java
@@ -61,7 +61,7 @@ preference提供了在app中持久保存简单数据的能力。preference本质
 
 preference保存的数据格式是(key，value)的形式，即key是索引，value是索引对应的值，所以我们可以key索引来找到对应的value。
 
-1. preference读取数据：
+1.preference读取数据：
 
 ```java
 SharedPreferences sp = getSharedPreferences('name', MODE_WORLD_READABLE);  
@@ -78,7 +78,7 @@ preference的操作模式有三种：
 
 获取preference的内容只需要通过`getString`等api即可。  
 
-2. preference写入数据：
+2.preference写入数据：
 
 ```java
 SharedPreferences.Editor editor = getSharedPreferences('name', MODE_WORLD_WRITEABLE).edit();  
@@ -94,7 +94,7 @@ editor.commit();
 
 SQLite是一款轻型的数据库，可以应对复杂的数据存储情况。
 
-1. SQLite数据类型
+1.SQLite数据类型
 
 NULL: 这个值为空值
 
@@ -106,7 +106,7 @@ TEXT: 值为文本字符串,使用数据库编码存储(TUTF-8, UTF-16BE or UTF-
 
 BLOB: 值是BLOB数据块，以输入的数据格式进行存储。如何输入就如何存储,不改变格式。
 
-2. SQLiteOpenHelper
+2.SQLiteOpenHelper
 
 在android中，代表数据库的类是SQLiteDatabase，创建数据库则需要通过android提供的数据库辅助类`SQLiteOpenHelper`来完成。
 
@@ -153,7 +153,7 @@ SQLiteDatabase db =dbHelper.getWritableDatabase();
 
 之后我们只需要通过数据库`SQLiteDatabase`的`execSQL`方法发射sql语句即可完成各种数据操作。当数据库使用结束时，需要调用`SQLiteDatabase`的`close`方法，防止内存泄露。
 
-3. sql语句
+3.sql语句
 
 - 创建数据库
 
